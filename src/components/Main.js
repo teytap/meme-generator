@@ -3,15 +3,17 @@ import React, { useState, useEffect } from "react";
 export default function Main() {
   const [allMemes, setAllMemes] = useState([]);
   const [meme, setMeme] = useState({
-    topText: "",
-    bottomText: "",
+    topText: "Shut up",
+    bottomText: "and take my money!",
     randomImage: "/images/memeimg.png",
   });
+
   useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
       .then((data) => setAllMemes(data.data.memes));
   }, []);
+
   function getMemeImage(event) {
     event.preventDefault();
 
