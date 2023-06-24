@@ -47,7 +47,7 @@ export default function Main() {
           onChange={handleChange}
         />
         <button onClick={getMemeImage} id="image-btn">
-          Get a new meme image 🖼
+          Get a new meme image
         </button>
       </form>
       <div className="meme">
